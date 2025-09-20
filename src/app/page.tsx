@@ -73,20 +73,18 @@ export default function Home() {
           <div className="flex flex-col items-center gap-4 w-full">
             {/* 丸いハゲ画像＋黄色オーバーレイ */}
             <div className="relative w-1/3 aspect-square rounded-full overflow-hidden shadow-lg min-w-[120px] max-w-[200px] sm:min-w-[150px] sm:max-w-[250px]">
-  <Image
-    key={currentHage + round} // ← keyを変える
-    src={currentHage}
-    alt="hage"
-    fill
-    className="object-cover"
-    style={{
-      clipPath: `inset(0 0 ${100 - revealLevel}%)`,
-      transition: "clip-path 0.3s linear",
-    }}
-  />
-</div>
-
-
+            <Image
+                key={currentHage + round} // ← keyを変える
+                src={currentHage}
+                alt="hage"
+                fill
+                className="object-cover"
+                style={{
+                  clipPath: `inset(0 0 ${100 - revealLevel}%)`,
+                  transition: "clip-path 0.3s linear",
+                }}
+              />
+            </div>
             {/* 進行状況 */}
             <div className="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
               <div
