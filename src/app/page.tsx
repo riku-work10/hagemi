@@ -28,7 +28,7 @@ export default function Home() {
     <main
       className="flex flex-col items-center justify-center min-h-screen w-full relative p-4 sm:p-8"
       style={{
-        backgroundImage: "url('/background.jpg')",
+        backgroundImage: "url('/images/hageback.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -48,7 +48,7 @@ export default function Home() {
         {gameState === "playing" && currentHage && (
           <div className="flex flex-col items-center gap-6 w-full">
             {/* 丸いハゲ画像 */}
-            <div className="relative w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] rounded-full overflow-hidden shadow-lg">
+            <div className="relative w-1/3 aspect-square rounded-full overflow-hidden shadow-lg min-w-[120px] max-w-[200px] sm:min-w-[150px] sm:max-w-[250px]">
               <Image
                 src={currentHage}
                 alt="hage"
@@ -60,7 +60,6 @@ export default function Home() {
                 }}
               />
             </div>
-
             {/* 進行状況 */}
             <div className="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
               <div
